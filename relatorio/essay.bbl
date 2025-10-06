@@ -1,0 +1,134 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global/global}
+  \entry{IEEEexample:BSTcontrol}{misc}{}{}
+  \endentry
+
+  \entry{espinoza2012optimization}{inproceedings}{}{}
+    \name{author}{3}{}{%
+      {{hash=EMS}{%
+         family={Espinoza},
+         familyi={E\bibinitperiod},
+         given={Mario\bibnamedelima S{\'a}enz},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=PAI}{%
+         family={Pereira},
+         familyi={P\bibinitperiod},
+         given={Ana\bibnamedelima I},
+         giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Gon{\c{c}}alves},
+         familyi={G\bibinitperiod},
+         given={Jos{\'e}},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EMSPAIGJ1}
+    \strng{fullhash}{EMSPAIGJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{booktitle}{AIP Conference Proceedings}
+    \field{pages}{818}
+    \field{title}{Optimization methods for hyper-redundant robots' inverse
+  kinematics in biomedical applications}
+    \field{volume}{1479}
+    \field{year}{2012}
+  \endentry
+
+  \entry{espinoza2012inverse}{inproceedings}{}{}
+    \name{author}{5}{}{%
+      {{hash=EMS}{%
+         family={Espinoza},
+         familyi={E\bibinitperiod},
+         given={Mario\bibnamedelima S{\'a}enz},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Goncalves},
+         familyi={G\bibinitperiod},
+         given={Jose},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Leitao},
+         familyi={L\bibinitperiod},
+         given={Paulo},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=SJLG}{%
+         family={Sanchez},
+         familyi={S\bibinitperiod},
+         given={Jose Luis\bibnamedelima Gonzalez},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Herreros},
+         familyi={H\bibinitperiod},
+         given={Alberto},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{EMS+1}
+    \strng{fullhash}{EMSGJLPSJLGHA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{booktitle}{Robotics Symposium and Latin American Robotics Symposium
+  (SBR-LARS), 2012 Brazilian}
+    \field{pages}{125\bibrangedash 130}
+    \field{title}{Inverse Kinematics of a 10 DOF modular hyper-redundant robot
+  resorting to exhaustive and error-optimization methods: A comparative study}
+    \field{year}{2012}
+  \endentry
+
+  \entry{kn:Tha01}{misc}{}{}
+    \name{author}{1}{}{%
+      {{hash=TM}{%
+         family={Tham},
+         familyi={T\bibinitperiod},
+         given={Ming},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{TM1}
+    \strng{fullhash}{TM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{note}{University of Newcastle Upon Tyne}
+    \field{title}{Writing Research Theses or Dissertations}
+    \verb{url}
+    \verb http://lorien.ncl.ac.uk/ming/dept/Tips/writing/thesis/thesis-intro.ht
+    \verb m
+    \endverb
+    \field{year}{2001}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+\enddatalist
+\endinput

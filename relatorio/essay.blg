@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: essay.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: essay-blx.bib
+Database file #2: references.bib
+Warning--entry type for "IEEEexample:BSTcontrol" isn't style-file defined
+--line 4 of file references.bib
+Biblatex version: 3.20
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 5 entries,
+            6402 wiz_defined-function locations,
+            1226 strings with 9795 characters,
+and the built_in function-call counts, 32591 in all, are:
+= -- 2655
+> -- 406
+< -- 102
++ -- 840
+- -- 162
+* -- 2386
+:= -- 3872
+add.period$ -- 0
+call.type$ -- 5
+change.case$ -- 34
+chr.to.int$ -- 43
+cite$ -- 8
+duplicate$ -- 2988
+empty$ -- 2981
+format.name$ -- 226
+if$ -- 6633
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 0
+newline$ -- 130
+num.names$ -- 130
+pop$ -- 1516
+preamble$ -- 1
+purify$ -- 53
+quote$ -- 0
+skip$ -- 666
+stack$ -- 0
+substring$ -- 5382
+swap$ -- 511
+text.length$ -- 121
+text.prefix$ -- 4
+top$ -- 1
+type$ -- 157
+warning$ -- 0
+while$ -- 444
+width$ -- 0
+write$ -- 126
+(There was 1 warning)

@@ -1,0 +1,141 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 12pt]{article} % Font size (can be 10pt, 11pt or 12pt) and paper size (remove a4paper for US letter paper)
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{graphicx} % Required for including pictures
+\usepackage{wrapfig} % Allows in-line images
+\usepackage{pdflscape} %Allows landscape oriented pages
+\usepackage{ulem} % para sublinhar
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}%Required for hyperlink references
+\hypersetup{
+	colorlinks=true, % Ativa links coloridos em vez de caixas ao redor
+	linkcolor=black, % Cor dos links internos
+	citecolor=black, % Cor das citações
+	urlcolor=black   % Cor dos links externos (Jira, por exemplo)
+}
+
+\usepackage{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Required for accented characters
+\linespread{1.05} % Change line spacing here, Palatino benefits from a slight increase by default
+\usepackage{float}
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\addbibresource{references.bib} % Nome do arquivo de referências
+\makeatletter
+\renewcommand\@biblabel[1]{\textbf{#1.}} % Change the square brackets for each bibliography item from '[1]' to '1.'
+\renewcommand{\@listI}{\itemsep=0pt} % Reduce the space between items in the itemize and enumerate environments and the bibliography
+
+\renewcommand{\maketitle}{
+\begin{titlepage}
+\begin{center}
+\vspace*{1cm}
+%\includegraphics[width=0.35\textwidth]{../images/logo-no-bg.png}\\[1cm] % Logo
+{\Huge\textbf{Clima e Consumo HVAC}}\\[0.5cm] % Main Title
+{\Large Integração de Sistemas de Informação}\\[2cm] % Subtitle
+{\large \textsc{
+	Enrique Rodrigues Nº28602}}\\[0.5cm] % Authors
+{\textit{Instituto Politécnico do Cávado e do Ave}}\\[1.5cm] % Institution
+% {\large 9 de março de 2025} % Date
+{\large \today} % Date
+\vfill
+% \textbf{Keywords:} lorem, ipsum, dolor, sit amet, lectus % Keywords
+\end{center}
+\end{titlepage}
+}
+\makeatother
+
+%------------------------------------------------------------------------------------
+\begin{document}
+\maketitle % Print the title section
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT AND KEYWORDS
+%----------------------------------------------------------------------------------------
+
+%\renewcommand{\abstractname}{Summary} % Uncomment to change the name of the abstract to something else
+
+% \begin{abstract}
+% Morbi tempor congue porta. Proin semper, leo vitae faucibus dictum, metus mauris lacinia lorem, ac congue leo felis eu turpis. Sed nec nunc pellentesque, gravida eros at, porttitor ipsum. Praesent consequat urna a lacus lobortis ultrices eget ac metus. In tempus hendrerit rhoncus. Mauris dignissim turpis id sollicitudin lacinia. Praesent libero tellus, fringilla nec ullamcorper at, ultrices id nulla. Phasellus placerat a tellus a malesuada.
+% \end{abstract}
+
+% \hspace*{3,6mm}\textit{Keywords:} lorem , ipsum , dolor , sit amet , lectus % Keywords
+
+% \vspace{30pt} % Some vertical space between the abstract and first section
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT BODY
+%----------------------------------------------------------------------------------------
+
+%\newpage
+%\renewcommand{\contentsname}{Índice}
+%\tableofcontents
+
+%------------------------------------------------------------------------------------
+
+%\newpage
+%\renewcommand{\listfigurename}{Lista de Figuras}
+%\listoffigures
+
+%------------------------------------------------------------------------------------
+
+% --- Fórmula da Temperatura Interior ---
+\[
+T_{\text{interior}}(t) = T_{\text{anterior}} + \alpha \cdot (T_{\text{exterior}} - T_{\text{anterior}}) + \beta \cdot (T_{\text{conforto}} - T_{\text{anterior}}) + \epsilon
+\]
+
+\textbf{Onde:}
+\begin{itemize}
+	\item $T_{\text{interior}}(t)$ = temperatura interior no instante atual
+	\item $T_{\text{anterior}}$ = temperatura interior no instante anterior
+	\item $T_{\text{exterior}}$ = temperatura exterior
+	\item $T_{\text{conforto}}$ = temperatura de conforto desejada (ex: 21°C)
+	\item $\alpha$ = coeficiente de isolamento do edifício
+	\item $\beta$ = coeficiente de correção do HVAC
+	\item $\epsilon$ = pequeno ruído aleatório
+\end{itemize}
+
+% --- Fórmula do Consumo do HVAC ---
+\[
+P_{\text{HVAC}} = \max \Bigg(20, \; 50 + 5 \cdot |T_{\text{conforto}} - T_{\text{exterior}}| + 20 \cdot |T_{\text{interior}} - T_{\text{conforto}}| + \eta \Bigg)
+\]
+
+\textbf{Onde:}
+\begin{itemize}
+	\item $P_{\text{HVAC}}$ = consumo de energia do HVAC (W)
+	\item $|T_{\text{conforto}} - T_{\text{exterior}}|$ = esforço do HVAC devido à temperatura exterior
+	\item $|T_{\text{interior}} - T_{\text{conforto}}|$ = esforço do HVAC devido à diferença da temperatura interior
+	\item 50 = carga base do HVAC (W)
+	\item 5, 20 = coeficientes de escalamento do esforço do HVAC
+	\item $\eta$ = pequeno ruído aleatório
+	\item $\max(20, \cdot)$ garante um consumo mínimo de 20 W
+\end{itemize}
+
+% --- Mapeamento CSV / ID do Dispositivo ---
+\[
+\text{Linha CSV} = (\text{timestamp}, \; \text{id\_dispositivo}, \; \text{sala}, \; \text{sensor}, \; \text{valor}, \; T_{\text{exterior}})
+\]
+
+\[
+\text{id\_dispositivo} = \text{sensor} + "_" + \text{nome\_sala\_limpo}
+\]
+
+% --- Representação Combinada ---
+\[
+\begin{cases}
+	T_{\text{interior}} = T_{\text{anterior}} + \alpha (T_{\text{exterior}} - T_{\text{anterior}}) + \beta (T_{\text{conforto}} - T_{\text{anterior}}) + \epsilon \\
+	P_{\text{HVAC}} = \max \big( 20, 50 + 5|T_{\text{conforto}} - T_{\text{exterior}}| + 20|T_{\text{interior}} - T_{\text{conforto}}| + \eta \big)
+\end{cases}
+\]
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\nocite{*}
+
+% \printbibliography
+%----------------------------------------------------------------------------------------
+
+\end{document}
