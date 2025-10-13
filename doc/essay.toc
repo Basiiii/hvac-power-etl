@@ -1,0 +1,13 @@
+\babel@toc {portuguese}{}\relax 
+\contentsline {section}{\numberline {1}Enquadramento}{2}{section.1}%
+\contentsline {section}{\numberline {2}Problema}{3}{section.2}%
+\contentsline {section}{\numberline {3}Estratégia Utilizada}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Aquisição e Simulação (Node-RED)}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Modelação Matemática das Variáveis Simuladas}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Transformação e Enriquecimento (Pentaho Kettle)}{5}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Transformações e Jobs (Pentaho)}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Transformações}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Jobs}{6}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Análise e Visualização (Python)}{7}{section.5}%
+\contentsline {section}{\numberline {6}Vídeo com Demonstração}{8}{section.6}%
+\contentsline {section}{\numberline {7}Conclusão e Trabalhos Futuros}{9}{section.7}%
