@@ -1,0 +1,176 @@
+[
+    {
+        "id": "5cb9ccfbd79d81d3",
+        "type": "tab",
+        "label": "Generate Simulated Data",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1dfd845120dcf627",
+        "type": "inject",
+        "z": "5cb9ccfbd79d81d3",
+        "name": "Inject Data",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "c870a398d3128b68"
+            ]
+        ]
+    },
+    {
+        "id": "c870a398d3128b68",
+        "type": "http request",
+        "z": "5cb9ccfbd79d81d3",
+        "name": "Fetch Outdoor Temp",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://archive-api.open-meteo.com/v1/archive?latitude=41.5317&longitude=-8.6184&start_date=2025-07-28&end_date=2025-07-28&hourly=temperature_2m&temperature_unit=celsius&timezone=Europe/Lisbon",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 300,
+        "y": 280,
+        "wires": [
+            [
+                "a3ff72b53bf90b23",
+                "714ee991dd95f32f"
+            ]
+        ]
+    },
+    {
+        "id": "a3ff72b53bf90b23",
+        "type": "function",
+        "z": "5cb9ccfbd79d81d3",
+        "name": "Extract Hourly Times & Temps",
+        "func": "const times = msg.payload.hourly.time;\nconst temps = msg.payload.hourly.temperature_2m;\n\nlet data = [];\nfor (let i = 0; i < times.length; i++) {\n    data.push({ timestamp: times[i], outdoorTemp: temps[i] });\n}\n\nmsg.payload = data;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 280,
+        "wires": [
+            [
+                "75c2b4b9962a7d3f"
+            ]
+        ]
+    },
+    {
+        "id": "75c2b4b9962a7d3f",
+        "type": "split",
+        "z": "5cb9ccfbd79d81d3",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "property": "payload",
+        "x": 810,
+        "y": 280,
+        "wires": [
+            [
+                "de3a273b0ae677a0"
+            ]
+        ]
+    },
+    {
+        "id": "de3a273b0ae677a0",
+        "type": "function",
+        "z": "5cb9ccfbd79d81d3",
+        "name": "Simulate Indoor Data",
+        "func": "// --- Config ---\nconst rooms = [\"Living Room\", \"Bedroom\", \"Kitchen\"];\nconst sensors = [\"temp\", \"power\"];\nconst comfortTemp = 21;\nconst roomParams = {\n    \"Living_Room\": { alpha: 0.04, beta: 0.35 },\n    \"Bedroom\": { alpha: 0.03, beta: 0.4 },\n    \"Kitchen\": { alpha: 0.06, beta: 0.3 }\n};\n\n// --- Inputs from previous node ---\nconst outdoorTemp = msg.payload.outdoorTemp;\nconst timestamp = msg.payload.timestamp;\n\nlet csvLines = [];\nrooms.forEach(room => {\n    let safeRoom = room.replace(/\\s+/g, \"_\");\n    let { alpha, beta } = roomParams[safeRoom];\n    let prevTemp = flow.get(`${safeRoom}_temp`) || comfortTemp;\n\n    // Indoor reacts slowly toward outdoor + HVAC correction toward comfort\n    let indoorTemp = prevTemp\n        + alpha * (outdoorTemp - prevTemp)   // building insulation\n        + beta * (comfortTemp - prevTemp)    // HVAC correction\n        + (Math.random() - 0.5) * 0.2;       // random noise\n\n    flow.set(`${safeRoom}_temp`, indoorTemp);\n\n    // Power use depends on HVAC effort to maintain comfort\n    let hvacEffort = Math.abs(comfortTemp - outdoorTemp);\n    let tempDeviation = Math.abs(indoorTemp - comfortTemp);\n    let power = 50 + hvacEffort * 5 + tempDeviation * 20 + (Math.random() * 10 - 5);\n    power = Math.max(20, Math.round(power));\n\n    sensors.forEach(sensor => {\n        let value = sensor === \"temp\" ? indoorTemp.toFixed(1) : power;\n        let deviceId = `${sensor}_${safeRoom.toLowerCase()}`;\n        csvLines.push(`${timestamp},${deviceId},${room},${sensor},${value},${outdoorTemp.toFixed(1)}`);\n    });\n});\n\nmsg.payload = csvLines.join(\"\\n\");\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 280,
+        "wires": [
+            [
+                "020e75ced57d6f21",
+                "c2a7f6e772ca5be5"
+            ]
+        ]
+    },
+    {
+        "id": "020e75ced57d6f21",
+        "type": "file",
+        "z": "5cb9ccfbd79d81d3",
+        "name": "Export CSV File",
+        "filename": "C:\\Users\\Basi\\Documents\\Github\\hvac-power-etl\\sensor_data.csv",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1220,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c2a7f6e772ca5be5",
+        "type": "debug",
+        "z": "5cb9ccfbd79d81d3",
+        "name": "Debug Console",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "714ee991dd95f32f",
+        "type": "debug",
+        "z": "5cb9ccfbd79d81d3",
+        "name": "Outdoor Temp Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 200,
+        "wires": []
+    }
+]
