@@ -1,147 +1,75 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Rows>
-<Row><timestamp>2025-07-28T00:00</timestamp> <room>Living Room</room> <avg_power>53.0</avg_power> <outdoor_temp>21.6</outdoor_temp> <temp_diff>0.6</temp_diff> <efficiency>33.125</efficiency></Row>
+<Row><timestamp>2025-07-28T00:00</timestamp> <room>Living Room</room> <avg_power>57.0</avg_power> <outdoor_temp>21.6</outdoor_temp> <temp_diff>0.6</temp_diff> <efficiency>35.625</efficiency></Row>
 <Row><timestamp>2025-07-28T00:00</timestamp> <room>Bedroom</room> <avg_power>53.0</avg_power> <outdoor_temp>21.6</outdoor_temp> <temp_diff>0.6</temp_diff> <efficiency>33.125</efficiency></Row>
-<Row><timestamp>2025-07-28T00:00</timestamp> <room>Kitchen</room> <avg_power>55.0</avg_power> <outdoor_temp>21.6</outdoor_temp> <temp_diff>0.6</temp_diff> <efficiency>34.375</efficiency></Row>
-<Row><timestamp>2025-07-28T01:00</timestamp> <room>Living Room</room> <avg_power>51.0</avg_power> <outdoor_temp>21.0</outdoor_temp> <temp_diff>0.0</temp_diff> <efficiency>51.0</efficiency></Row>
-<Row><timestamp>2025-07-28T01:00</timestamp> <room>Bedroom</room> <avg_power>48.0</avg_power> <outdoor_temp>21.0</outdoor_temp> <temp_diff>0.0</temp_diff> <efficiency>48.0</efficiency></Row>
-<Row><timestamp>2025-07-28T01:00</timestamp> <room>Kitchen</room> <avg_power>48.0</avg_power> <outdoor_temp>21.0</outdoor_temp> <temp_diff>0.0</temp_diff> <efficiency>48.0</efficiency></Row>
-<Row><timestamp>2025-07-28T02:00</timestamp> <room>Living Room</room> <avg_power>60.0</avg_power> <outdoor_temp>20.2</outdoor_temp> <temp_diff>0.8</temp_diff> <efficiency>33.3333333333</efficiency></Row>
-<Row><timestamp>2025-07-28T02:00</timestamp> <room>Bedroom</room> <avg_power>61.0</avg_power> <outdoor_temp>20.2</outdoor_temp> <temp_diff>0.8</temp_diff> <efficiency>33.8888888889</efficiency></Row>
-<Row><timestamp>2025-07-28T02:00</timestamp> <room>Kitchen</room> <avg_power>55.0</avg_power> <outdoor_temp>20.2</outdoor_temp> <temp_diff>0.8</temp_diff> <efficiency>30.5555555556</efficiency></Row>
-<Row><timestamp>2025-07-28T03:00</timestamp> <room>Living Room</room> <avg_power>55.0</avg_power> <outdoor_temp>19.3</outdoor_temp> <temp_diff>1.7</temp_diff> <efficiency>20.3703703704</efficiency></Row>
-<Row><timestamp>2025-07-28T03:00</timestamp> <room>Bedroom</room> <avg_power>56.0</avg_power> <outdoor_temp>19.3</outdoor_temp> <temp_diff>1.7</temp_diff> <efficiency>20.7407407407</efficiency></Row>
-<Row><timestamp>2025-07-28T03:00</timestamp> <room>Kitchen</room> <avg_power>58.0</avg_power> <outdoor_temp>19.3</outdoor_temp> <temp_diff>1.7</temp_diff> <efficiency>21.4814814815</efficiency></Row>
-<Row><timestamp>2025-07-28T04:00</timestamp> <room>Living Room</room> <avg_power>61.0</avg_power> <outdoor_temp>18.6</outdoor_temp> <temp_diff>2.4</temp_diff> <efficiency>17.9411764706</efficiency></Row>
-<Row><timestamp>2025-07-28T04:00</timestamp> <room>Bedroom</room> <avg_power>63.0</avg_power> <outdoor_temp>18.6</outdoor_temp> <temp_diff>2.4</temp_diff> <efficiency>18.5294117647</efficiency></Row>
-<Row><timestamp>2025-07-28T04:00</timestamp> <room>Kitchen</room> <avg_power>62.0</avg_power> <outdoor_temp>18.6</outdoor_temp> <temp_diff>2.4</temp_diff> <efficiency>18.2352941176</efficiency></Row>
-<Row><timestamp>2025-07-28T05:00</timestamp> <room>Living Room</room> <avg_power>67.0</avg_power> <outdoor_temp>18.2</outdoor_temp> <temp_diff>2.8</temp_diff> <efficiency>17.6315789474</efficiency></Row>
-<Row><timestamp>2025-07-28T05:00</timestamp> <room>Bedroom</room> <avg_power>66.0</avg_power> <outdoor_temp>18.2</outdoor_temp> <temp_diff>2.8</temp_diff> <efficiency>17.3684210526</efficiency></Row>
-<Row><timestamp>2025-07-28T05:00</timestamp> <room>Kitchen</room> <avg_power>62.0</avg_power> <outdoor_temp>18.2</outdoor_temp> <temp_diff>2.8</temp_diff> <efficiency>16.3157894737</efficiency></Row>
-<Row><timestamp>2025-07-28T06:00</timestamp> <room>Living Room</room> <avg_power>67.0</avg_power> <outdoor_temp>17.9</outdoor_temp> <temp_diff>3.1</temp_diff> <efficiency>16.3414634146</efficiency></Row>
-<Row><timestamp>2025-07-28T06:00</timestamp> <room>Bedroom</room> <avg_power>70.0</avg_power> <outdoor_temp>17.9</outdoor_temp> <temp_diff>3.1</temp_diff> <efficiency>17.0731707317</efficiency></Row>
-<Row><timestamp>2025-07-28T06:00</timestamp> <room>Kitchen</room> <avg_power>76.0</avg_power> <outdoor_temp>17.9</outdoor_temp> <temp_diff>3.1</temp_diff> <efficiency>18.5365853659</efficiency></Row>
-<Row><timestamp>2025-07-28T07:00</timestamp> <room>Living Room</room> <avg_power>69.0</avg_power> <outdoor_temp>18.0</outdoor_temp> <temp_diff>3.0</temp_diff> <efficiency>17.25</efficiency></Row>
-<Row><timestamp>2025-07-28T07:00</timestamp> <room>Bedroom</room> <avg_power>72.0</avg_power> <outdoor_temp>18.0</outdoor_temp> <temp_diff>3.0</temp_diff> <efficiency>18.0</efficiency></Row>
-<Row><timestamp>2025-07-28T07:00</timestamp> <room>Kitchen</room> <avg_power>73.0</avg_power> <outdoor_temp>18.0</outdoor_temp> <temp_diff>3.0</temp_diff> <efficiency>18.25</efficiency></Row>
-<Row><timestamp>2025-07-28T08:00</timestamp> <room>Living Room</room> <avg_power>59.0</avg_power> <outdoor_temp>19.7</outdoor_temp> <temp_diff>1.3</temp_diff> <efficiency>25.652173913</efficiency></Row>
-<Row><timestamp>2025-07-28T08:00</timestamp> <room>Bedroom</room> <avg_power>60.0</avg_power> <outdoor_temp>19.7</outdoor_temp> <temp_diff>1.3</temp_diff> <efficiency>26.0869565217</efficiency></Row>
-<Row><timestamp>2025-07-28T08:00</timestamp> <room>Kitchen</room> <avg_power>60.0</avg_power> <outdoor_temp>19.7</outdoor_temp> <temp_diff>1.3</temp_diff> <efficiency>26.0869565217</efficiency></Row>
-<Row><timestamp>2025-07-28T09:00</timestamp> <room>Living Room</room> <avg_power>58.0</avg_power> <outdoor_temp>22.0</outdoor_temp> <temp_diff>1.0</temp_diff> <efficiency>29.0</efficiency></Row>
-<Row><timestamp>2025-07-28T09:00</timestamp> <room>Bedroom</room> <avg_power>61.0</avg_power> <outdoor_temp>22.0</outdoor_temp> <temp_diff>1.0</temp_diff> <efficiency>30.5</efficiency></Row>
-<Row><timestamp>2025-07-28T09:00</timestamp> <room>Kitchen</room> <avg_power>53.0</avg_power> <outdoor_temp>22.0</outdoor_temp> <temp_diff>1.0</temp_diff> <efficiency>26.5</efficiency></Row>
-<Row><timestamp>2025-07-28T10:00</timestamp> <room>Living Room</room> <avg_power>73.0</avg_power> <outdoor_temp>24.5</outdoor_temp> <temp_diff>3.5</temp_diff> <efficiency>16.2222222222</efficiency></Row>
+<Row><timestamp>2025-07-28T00:00</timestamp> <room>Kitchen</room> <avg_power>69.0</avg_power> <outdoor_temp>21.6</outdoor_temp> <temp_diff>0.6</temp_diff> <efficiency>43.125</efficiency></Row>
+<Row><timestamp>2025-07-28T01:00</timestamp> <room>Living Room</room> <avg_power>49.0</avg_power> <outdoor_temp>21.0</outdoor_temp> <temp_diff>0.0</temp_diff> <efficiency>49.0</efficiency></Row>
+<Row><timestamp>2025-07-28T01:00</timestamp> <room>Bedroom</room> <avg_power>50.0</avg_power> <outdoor_temp>21.0</outdoor_temp> <temp_diff>0.0</temp_diff> <efficiency>50.0</efficiency></Row>
+<Row><timestamp>2025-07-28T01:00</timestamp> <room>Kitchen</room> <avg_power>65.0</avg_power> <outdoor_temp>21.0</outdoor_temp> <temp_diff>0.0</temp_diff> <efficiency>65.0</efficiency></Row>
+<Row><timestamp>2025-07-28T02:00</timestamp> <room>Living Room</room> <avg_power>58.0</avg_power> <outdoor_temp>20.2</outdoor_temp> <temp_diff>0.8</temp_diff> <efficiency>32.2222222222</efficiency></Row>
+<Row><timestamp>2025-07-28T02:00</timestamp> <room>Bedroom</room> <avg_power>51.0</avg_power> <outdoor_temp>20.2</outdoor_temp> <temp_diff>0.8</temp_diff> <efficiency>28.3333333333</efficiency></Row>
+<Row><timestamp>2025-07-28T02:00</timestamp> <room>Kitchen</room> <avg_power>57.0</avg_power> <outdoor_temp>20.2</outdoor_temp> <temp_diff>0.8</temp_diff> <efficiency>31.6666666667</efficiency></Row>
+<Row><timestamp>2025-07-28T03:00</timestamp> <room>Living Room</room> <avg_power>62.0</avg_power> <outdoor_temp>19.3</outdoor_temp> <temp_diff>1.7</temp_diff> <efficiency>22.962962963</efficiency></Row>
+<Row><timestamp>2025-07-28T03:00</timestamp> <room>Bedroom</room> <avg_power>59.0</avg_power> <outdoor_temp>19.3</outdoor_temp> <temp_diff>1.7</temp_diff> <efficiency>21.8518518519</efficiency></Row>
+<Row><timestamp>2025-07-28T03:00</timestamp> <room>Kitchen</room> <avg_power>60.0</avg_power> <outdoor_temp>19.3</outdoor_temp> <temp_diff>1.7</temp_diff> <efficiency>22.2222222222</efficiency></Row>
+<Row><timestamp>2025-07-28T04:00</timestamp> <room>Living Room</room> <avg_power>59.0</avg_power> <outdoor_temp>18.6</outdoor_temp> <temp_diff>2.4</temp_diff> <efficiency>17.3529411765</efficiency></Row>
+<Row><timestamp>2025-07-28T04:00</timestamp> <room>Bedroom</room> <avg_power>66.0</avg_power> <outdoor_temp>18.6</outdoor_temp> <temp_diff>2.4</temp_diff> <efficiency>19.4117647059</efficiency></Row>
+<Row><timestamp>2025-07-28T04:00</timestamp> <room>Kitchen</room> <avg_power>64.0</avg_power> <outdoor_temp>18.6</outdoor_temp> <temp_diff>2.4</temp_diff> <efficiency>18.8235294118</efficiency></Row>
+<Row><timestamp>2025-07-28T05:00</timestamp> <room>Living Room</room> <avg_power>70.0</avg_power> <outdoor_temp>18.2</outdoor_temp> <temp_diff>2.8</temp_diff> <efficiency>18.4210526316</efficiency></Row>
+<Row><timestamp>2025-07-28T05:00</timestamp> <room>Bedroom</room> <avg_power>68.0</avg_power> <outdoor_temp>18.2</outdoor_temp> <temp_diff>2.8</temp_diff> <efficiency>17.8947368421</efficiency></Row>
+<Row><timestamp>2025-07-28T05:00</timestamp> <room>Kitchen</room> <avg_power>71.0</avg_power> <outdoor_temp>18.2</outdoor_temp> <temp_diff>2.8</temp_diff> <efficiency>18.6842105263</efficiency></Row>
+<Row><timestamp>2025-07-28T06:00</timestamp> <room>Living Room</room> <avg_power>73.0</avg_power> <outdoor_temp>17.9</outdoor_temp> <temp_diff>3.1</temp_diff> <efficiency>17.8048780488</efficiency></Row>
+<Row><timestamp>2025-07-28T06:00</timestamp> <room>Bedroom</room> <avg_power>67.0</avg_power> <outdoor_temp>17.9</outdoor_temp> <temp_diff>3.1</temp_diff> <efficiency>16.3414634146</efficiency></Row>
+<Row><timestamp>2025-07-28T06:00</timestamp> <room>Kitchen</room> <avg_power>74.0</avg_power> <outdoor_temp>17.9</outdoor_temp> <temp_diff>3.1</temp_diff> <efficiency>18.0487804878</efficiency></Row>
+<Row><timestamp>2025-07-28T07:00</timestamp> <room>Living Room</room> <avg_power>73.0</avg_power> <outdoor_temp>18.0</outdoor_temp> <temp_diff>3.0</temp_diff> <efficiency>18.25</efficiency></Row>
+<Row><timestamp>2025-07-28T07:00</timestamp> <room>Bedroom</room> <avg_power>68.0</avg_power> <outdoor_temp>18.0</outdoor_temp> <temp_diff>3.0</temp_diff> <efficiency>17.0</efficiency></Row>
+<Row><timestamp>2025-07-28T07:00</timestamp> <room>Kitchen</room> <avg_power>77.0</avg_power> <outdoor_temp>18.0</outdoor_temp> <temp_diff>3.0</temp_diff> <efficiency>19.25</efficiency></Row>
+<Row><timestamp>2025-07-28T08:00</timestamp> <room>Living Room</room> <avg_power>57.0</avg_power> <outdoor_temp>19.7</outdoor_temp> <temp_diff>1.3</temp_diff> <efficiency>24.7826086957</efficiency></Row>
+<Row><timestamp>2025-07-28T08:00</timestamp> <room>Bedroom</room> <avg_power>63.0</avg_power> <outdoor_temp>19.7</outdoor_temp> <temp_diff>1.3</temp_diff> <efficiency>27.3913043478</efficiency></Row>
+<Row><timestamp>2025-07-28T08:00</timestamp> <room>Kitchen</room> <avg_power>63.0</avg_power> <outdoor_temp>19.7</outdoor_temp> <temp_diff>1.3</temp_diff> <efficiency>27.3913043478</efficiency></Row>
+<Row><timestamp>2025-07-28T09:00</timestamp> <room>Living Room</room> <avg_power>61.0</avg_power> <outdoor_temp>22.0</outdoor_temp> <temp_diff>1.0</temp_diff> <efficiency>30.5</efficiency></Row>
+<Row><timestamp>2025-07-28T09:00</timestamp> <room>Bedroom</room> <avg_power>53.0</avg_power> <outdoor_temp>22.0</outdoor_temp> <temp_diff>1.0</temp_diff> <efficiency>26.5</efficiency></Row>
+<Row><timestamp>2025-07-28T09:00</timestamp> <room>Kitchen</room> <avg_power>58.0</avg_power> <outdoor_temp>22.0</outdoor_temp> <temp_diff>1.0</temp_diff> <efficiency>29.0</efficiency></Row>
+<Row><timestamp>2025-07-28T10:00</timestamp> <room>Living Room</room> <avg_power>68.0</avg_power> <outdoor_temp>24.5</outdoor_temp> <temp_diff>3.5</temp_diff> <efficiency>15.1111111111</efficiency></Row>
 <Row><timestamp>2025-07-28T10:00</timestamp> <room>Bedroom</room> <avg_power>66.0</avg_power> <outdoor_temp>24.5</outdoor_temp> <temp_diff>3.5</temp_diff> <efficiency>14.6666666667</efficiency></Row>
-<Row><timestamp>2025-07-28T10:00</timestamp> <room>Kitchen</room> <avg_power>67.0</avg_power> <outdoor_temp>24.5</outdoor_temp> <temp_diff>3.5</temp_diff> <efficiency>14.8888888889</efficiency></Row>
-<Row><timestamp>2025-07-28T11:00</timestamp> <room>Living Room</room> <avg_power>90.0</avg_power> <outdoor_temp>27.1</outdoor_temp> <temp_diff>6.1</temp_diff> <efficiency>12.676056338</efficiency></Row>
+<Row><timestamp>2025-07-28T10:00</timestamp> <room>Kitchen</room> <avg_power>68.0</avg_power> <outdoor_temp>24.5</outdoor_temp> <temp_diff>3.5</temp_diff> <efficiency>15.1111111111</efficiency></Row>
+<Row><timestamp>2025-07-28T11:00</timestamp> <room>Living Room</room> <avg_power>86.0</avg_power> <outdoor_temp>27.1</outdoor_temp> <temp_diff>6.1</temp_diff> <efficiency>12.1126760563</efficiency></Row>
 <Row><timestamp>2025-07-28T11:00</timestamp> <room>Bedroom</room> <avg_power>85.0</avg_power> <outdoor_temp>27.1</outdoor_temp> <temp_diff>6.1</temp_diff> <efficiency>11.9718309859</efficiency></Row>
-<Row><timestamp>2025-07-28T11:00</timestamp> <room>Kitchen</room> <avg_power>84.0</avg_power> <outdoor_temp>27.1</outdoor_temp> <temp_diff>6.1</temp_diff> <efficiency>11.8309859155</efficiency></Row>
-<Row><timestamp>2025-07-28T12:00</timestamp> <room>Living Room</room> <avg_power>107.0</avg_power> <outdoor_temp>29.4</outdoor_temp> <temp_diff>8.4</temp_diff> <efficiency>11.3829787234</efficiency></Row>
-<Row><timestamp>2025-07-28T12:00</timestamp> <room>Bedroom</room> <avg_power>98.0</avg_power> <outdoor_temp>29.4</outdoor_temp> <temp_diff>8.4</temp_diff> <efficiency>10.4255319149</efficiency></Row>
+<Row><timestamp>2025-07-28T11:00</timestamp> <room>Kitchen</room> <avg_power>94.0</avg_power> <outdoor_temp>27.1</outdoor_temp> <temp_diff>6.1</temp_diff> <efficiency>13.2394366197</efficiency></Row>
+<Row><timestamp>2025-07-28T12:00</timestamp> <room>Living Room</room> <avg_power>98.0</avg_power> <outdoor_temp>29.4</outdoor_temp> <temp_diff>8.4</temp_diff> <efficiency>10.4255319149</efficiency></Row>
+<Row><timestamp>2025-07-28T12:00</timestamp> <room>Bedroom</room> <avg_power>99.0</avg_power> <outdoor_temp>29.4</outdoor_temp> <temp_diff>8.4</temp_diff> <efficiency>10.5319148936</efficiency></Row>
 <Row><timestamp>2025-07-28T12:00</timestamp> <room>Kitchen</room> <avg_power>110.0</avg_power> <outdoor_temp>29.4</outdoor_temp> <temp_diff>8.4</temp_diff> <efficiency>11.7021276596</efficiency></Row>
-<Row><timestamp>2025-07-28T13:00</timestamp> <room>Living Room</room> <avg_power>112.0</avg_power> <outdoor_temp>31.2</outdoor_temp> <temp_diff>10.2</temp_diff> <efficiency>10.0</efficiency></Row>
-<Row><timestamp>2025-07-28T13:00</timestamp> <room>Bedroom</room> <avg_power>108.0</avg_power> <outdoor_temp>31.2</outdoor_temp> <temp_diff>10.2</temp_diff> <efficiency>9.6428571429</efficiency></Row>
-<Row><timestamp>2025-07-28T13:00</timestamp> <room>Kitchen</room> <avg_power>122.0</avg_power> <outdoor_temp>31.2</outdoor_temp> <temp_diff>10.2</temp_diff> <efficiency>10.8928571429</efficiency></Row>
-<Row><timestamp>2025-07-28T14:00</timestamp> <room>Living Room</room> <avg_power>120.0</avg_power> <outdoor_temp>32.2</outdoor_temp> <temp_diff>11.2</temp_diff> <efficiency>9.8360655738</efficiency></Row>
-<Row><timestamp>2025-07-28T14:00</timestamp> <room>Bedroom</room> <avg_power>118.0</avg_power> <outdoor_temp>32.2</outdoor_temp> <temp_diff>11.2</temp_diff> <efficiency>9.6721311475</efficiency></Row>
-<Row><timestamp>2025-07-28T14:00</timestamp> <room>Kitchen</room> <avg_power>138.0</avg_power> <outdoor_temp>32.2</outdoor_temp> <temp_diff>11.2</temp_diff> <efficiency>11.3114754098</efficiency></Row>
+<Row><timestamp>2025-07-28T13:00</timestamp> <room>Living Room</room> <avg_power>108.0</avg_power> <outdoor_temp>31.2</outdoor_temp> <temp_diff>10.2</temp_diff> <efficiency>9.6428571429</efficiency></Row>
+<Row><timestamp>2025-07-28T13:00</timestamp> <room>Bedroom</room> <avg_power>111.0</avg_power> <outdoor_temp>31.2</outdoor_temp> <temp_diff>10.2</temp_diff> <efficiency>9.9107142857</efficiency></Row>
+<Row><timestamp>2025-07-28T13:00</timestamp> <room>Kitchen</room> <avg_power>121.0</avg_power> <outdoor_temp>31.2</outdoor_temp> <temp_diff>10.2</temp_diff> <efficiency>10.8035714286</efficiency></Row>
+<Row><timestamp>2025-07-28T14:00</timestamp> <room>Living Room</room> <avg_power>128.0</avg_power> <outdoor_temp>32.2</outdoor_temp> <temp_diff>11.2</temp_diff> <efficiency>10.4918032787</efficiency></Row>
+<Row><timestamp>2025-07-28T14:00</timestamp> <room>Bedroom</room> <avg_power>115.0</avg_power> <outdoor_temp>32.2</outdoor_temp> <temp_diff>11.2</temp_diff> <efficiency>9.4262295082</efficiency></Row>
+<Row><timestamp>2025-07-28T14:00</timestamp> <room>Kitchen</room> <avg_power>135.0</avg_power> <outdoor_temp>32.2</outdoor_temp> <temp_diff>11.2</temp_diff> <efficiency>11.0655737705</efficiency></Row>
 <Row><timestamp>2025-07-28T15:00</timestamp> <room>Living Room</room> <avg_power>131.0</avg_power> <outdoor_temp>33.1</outdoor_temp> <temp_diff>12.1</temp_diff> <efficiency>10.0</efficiency></Row>
-<Row><timestamp>2025-07-28T15:00</timestamp> <room>Bedroom</room> <avg_power>124.0</avg_power> <outdoor_temp>33.1</outdoor_temp> <temp_diff>12.1</temp_diff> <efficiency>9.465648855</efficiency></Row>
-<Row><timestamp>2025-07-28T15:00</timestamp> <room>Kitchen</room> <avg_power>147.0</avg_power> <outdoor_temp>33.1</outdoor_temp> <temp_diff>12.1</temp_diff> <efficiency>11.2213740458</efficiency></Row>
-<Row><timestamp>2025-07-28T16:00</timestamp> <room>Living Room</room> <avg_power>133.0</avg_power> <outdoor_temp>33.6</outdoor_temp> <temp_diff>12.6</temp_diff> <efficiency>9.7794117647</efficiency></Row>
-<Row><timestamp>2025-07-28T16:00</timestamp> <room>Bedroom</room> <avg_power>125.0</avg_power> <outdoor_temp>33.6</outdoor_temp> <temp_diff>12.6</temp_diff> <efficiency>9.1911764706</efficiency></Row>
-<Row><timestamp>2025-07-28T16:00</timestamp> <room>Kitchen</room> <avg_power>154.0</avg_power> <outdoor_temp>33.6</outdoor_temp> <temp_diff>12.6</temp_diff> <efficiency>11.3235294118</efficiency></Row>
-<Row><timestamp>2025-07-28T17:00</timestamp> <room>Living Room</room> <avg_power>135.0</avg_power> <outdoor_temp>33.7</outdoor_temp> <temp_diff>12.7</temp_diff> <efficiency>9.8540145985</efficiency></Row>
-<Row><timestamp>2025-07-28T17:00</timestamp> <room>Bedroom</room> <avg_power>127.0</avg_power> <outdoor_temp>33.7</outdoor_temp> <temp_diff>12.7</temp_diff> <efficiency>9.2700729927</efficiency></Row>
+<Row><timestamp>2025-07-28T15:00</timestamp> <room>Bedroom</room> <avg_power>121.0</avg_power> <outdoor_temp>33.1</outdoor_temp> <temp_diff>12.1</temp_diff> <efficiency>9.2366412214</efficiency></Row>
+<Row><timestamp>2025-07-28T15:00</timestamp> <room>Kitchen</room> <avg_power>143.0</avg_power> <outdoor_temp>33.1</outdoor_temp> <temp_diff>12.1</temp_diff> <efficiency>10.9160305344</efficiency></Row>
+<Row><timestamp>2025-07-28T16:00</timestamp> <room>Living Room</room> <avg_power>131.0</avg_power> <outdoor_temp>33.6</outdoor_temp> <temp_diff>12.6</temp_diff> <efficiency>9.6323529412</efficiency></Row>
+<Row><timestamp>2025-07-28T16:00</timestamp> <room>Bedroom</room> <avg_power>134.0</avg_power> <outdoor_temp>33.6</outdoor_temp> <temp_diff>12.6</temp_diff> <efficiency>9.8529411765</efficiency></Row>
+<Row><timestamp>2025-07-28T16:00</timestamp> <room>Kitchen</room> <avg_power>145.0</avg_power> <outdoor_temp>33.6</outdoor_temp> <temp_diff>12.6</temp_diff> <efficiency>10.6617647059</efficiency></Row>
+<Row><timestamp>2025-07-28T17:00</timestamp> <room>Living Room</room> <avg_power>139.0</avg_power> <outdoor_temp>33.7</outdoor_temp> <temp_diff>12.7</temp_diff> <efficiency>10.1459854015</efficiency></Row>
+<Row><timestamp>2025-07-28T17:00</timestamp> <room>Bedroom</room> <avg_power>135.0</avg_power> <outdoor_temp>33.7</outdoor_temp> <temp_diff>12.7</temp_diff> <efficiency>9.8540145985</efficiency></Row>
 <Row><timestamp>2025-07-28T17:00</timestamp> <room>Kitchen</room> <avg_power>152.0</avg_power> <outdoor_temp>33.7</outdoor_temp> <temp_diff>12.7</temp_diff> <efficiency>11.0948905109</efficiency></Row>
 <Row><timestamp>2025-07-28T18:00</timestamp> <room>Living Room</room> <avg_power>137.0</avg_power> <outdoor_temp>33.2</outdoor_temp> <temp_diff>12.2</temp_diff> <efficiency>10.3787878788</efficiency></Row>
-<Row><timestamp>2025-07-28T18:00</timestamp> <room>Bedroom</room> <avg_power>131.0</avg_power> <outdoor_temp>33.2</outdoor_temp> <temp_diff>12.2</temp_diff> <efficiency>9.9242424242</efficiency></Row>
-<Row><timestamp>2025-07-28T18:00</timestamp> <room>Kitchen</room> <avg_power>148.0</avg_power> <outdoor_temp>33.2</outdoor_temp> <temp_diff>12.2</temp_diff> <efficiency>11.2121212121</efficiency></Row>
-<Row><timestamp>2025-07-28T19:00</timestamp> <room>Living Room</room> <avg_power>128.0</avg_power> <outdoor_temp>31.8</outdoor_temp> <temp_diff>10.8</temp_diff> <efficiency>10.8474576271</efficiency></Row>
-<Row><timestamp>2025-07-28T19:00</timestamp> <room>Bedroom</room> <avg_power>122.0</avg_power> <outdoor_temp>31.8</outdoor_temp> <temp_diff>10.8</temp_diff> <efficiency>10.3389830508</efficiency></Row>
-<Row><timestamp>2025-07-28T19:00</timestamp> <room>Kitchen</room> <avg_power>140.0</avg_power> <outdoor_temp>31.8</outdoor_temp> <temp_diff>10.8</temp_diff> <efficiency>11.8644067797</efficiency></Row>
-<Row><timestamp>2025-07-28T20:00</timestamp> <room>Living Room</room> <avg_power>115.0</avg_power> <outdoor_temp>30.2</outdoor_temp> <temp_diff>9.2</temp_diff> <efficiency>11.2745098039</efficiency></Row>
-<Row><timestamp>2025-07-28T20:00</timestamp> <room>Bedroom</room> <avg_power>117.0</avg_power> <outdoor_temp>30.2</outdoor_temp> <temp_diff>9.2</temp_diff> <efficiency>11.4705882353</efficiency></Row>
-<Row><timestamp>2025-07-28T20:00</timestamp> <room>Kitchen</room> <avg_power>135.0</avg_power> <outdoor_temp>30.2</outdoor_temp> <temp_diff>9.2</temp_diff> <efficiency>13.2352941176</efficiency></Row>
+<Row><timestamp>2025-07-28T18:00</timestamp> <room>Bedroom</room> <avg_power>135.0</avg_power> <outdoor_temp>33.2</outdoor_temp> <temp_diff>12.2</temp_diff> <efficiency>10.2272727273</efficiency></Row>
+<Row><timestamp>2025-07-28T18:00</timestamp> <room>Kitchen</room> <avg_power>146.0</avg_power> <outdoor_temp>33.2</outdoor_temp> <temp_diff>12.2</temp_diff> <efficiency>11.0606060606</efficiency></Row>
+<Row><timestamp>2025-07-28T19:00</timestamp> <room>Living Room</room> <avg_power>121.0</avg_power> <outdoor_temp>31.8</outdoor_temp> <temp_diff>10.8</temp_diff> <efficiency>10.2542372881</efficiency></Row>
+<Row><timestamp>2025-07-28T19:00</timestamp> <room>Bedroom</room> <avg_power>119.0</avg_power> <outdoor_temp>31.8</outdoor_temp> <temp_diff>10.8</temp_diff> <efficiency>10.0847457627</efficiency></Row>
+<Row><timestamp>2025-07-28T19:00</timestamp> <room>Kitchen</room> <avg_power>138.0</avg_power> <outdoor_temp>31.8</outdoor_temp> <temp_diff>10.8</temp_diff> <efficiency>11.6949152542</efficiency></Row>
+<Row><timestamp>2025-07-28T20:00</timestamp> <room>Living Room</room> <avg_power>120.0</avg_power> <outdoor_temp>30.2</outdoor_temp> <temp_diff>9.2</temp_diff> <efficiency>11.7647058824</efficiency></Row>
+<Row><timestamp>2025-07-28T20:00</timestamp> <room>Bedroom</room> <avg_power>115.0</avg_power> <outdoor_temp>30.2</outdoor_temp> <temp_diff>9.2</temp_diff> <efficiency>11.2745098039</efficiency></Row>
+<Row><timestamp>2025-07-28T20:00</timestamp> <room>Kitchen</room> <avg_power>133.0</avg_power> <outdoor_temp>30.2</outdoor_temp> <temp_diff>9.2</temp_diff> <efficiency>13.0392156863</efficiency></Row>
 <Row><timestamp>2025-07-28T21:00</timestamp> <room>Living Room</room> <avg_power>106.0</avg_power> <outdoor_temp>28.3</outdoor_temp> <temp_diff>7.3</temp_diff> <efficiency>12.7710843373</efficiency></Row>
-<Row><timestamp>2025-07-28T21:00</timestamp> <room>Bedroom</room> <avg_power>104.0</avg_power> <outdoor_temp>28.3</outdoor_temp> <temp_diff>7.3</temp_diff> <efficiency>12.5301204819</efficiency></Row>
-<Row><timestamp>2025-07-28T21:00</timestamp> <room>Kitchen</room> <avg_power>114.0</avg_power> <outdoor_temp>28.3</outdoor_temp> <temp_diff>7.3</temp_diff> <efficiency>13.734939759</efficiency></Row>
-<Row><timestamp>2025-07-28T22:00</timestamp> <room>Living Room</room> <avg_power>100.0</avg_power> <outdoor_temp>26.7</outdoor_temp> <temp_diff>5.7</temp_diff> <efficiency>14.9253731343</efficiency></Row>
-<Row><timestamp>2025-07-28T22:00</timestamp> <room>Bedroom</room> <avg_power>90.0</avg_power> <outdoor_temp>26.7</outdoor_temp> <temp_diff>5.7</temp_diff> <efficiency>13.4328358209</efficiency></Row>
-<Row><timestamp>2025-07-28T22:00</timestamp> <room>Kitchen</room> <avg_power>103.0</avg_power> <outdoor_temp>26.7</outdoor_temp> <temp_diff>5.7</temp_diff> <efficiency>15.3731343284</efficiency></Row>
-<Row><timestamp>2025-07-28T23:00</timestamp> <room>Living Room</room> <avg_power>85.0</avg_power> <outdoor_temp>25.4</outdoor_temp> <temp_diff>4.4</temp_diff> <efficiency>15.7407407407</efficiency></Row>
-<Row><timestamp>2025-07-28T23:00</timestamp> <room>Bedroom</room> <avg_power>77.0</avg_power> <outdoor_temp>25.4</outdoor_temp> <temp_diff>4.4</temp_diff> <efficiency>14.2592592593</efficiency></Row>
-<Row><timestamp>2025-07-28T23:00</timestamp> <room>Kitchen</room> <avg_power>99.0</avg_power> <outdoor_temp>25.4</outdoor_temp> <temp_diff>4.4</temp_diff> <efficiency>18.3333333333</efficiency></Row>
-<Row><timestamp>2025-07-28T00:00</timestamp> <room>Living Room</room> <avg_power>62.0</avg_power> <outdoor_temp>21.6</outdoor_temp> <temp_diff>0.6</temp_diff> <efficiency>38.75</efficiency></Row>
-<Row><timestamp>2025-07-28T00:00</timestamp> <room>Bedroom</room> <avg_power>56.0</avg_power> <outdoor_temp>21.6</outdoor_temp> <temp_diff>0.6</temp_diff> <efficiency>35.0</efficiency></Row>
-<Row><timestamp>2025-07-28T00:00</timestamp> <room>Kitchen</room> <avg_power>72.0</avg_power> <outdoor_temp>21.6</outdoor_temp> <temp_diff>0.6</temp_diff> <efficiency>45.0</efficiency></Row>
-<Row><timestamp>2025-07-28T01:00</timestamp> <room>Living Room</room> <avg_power>55.0</avg_power> <outdoor_temp>21.0</outdoor_temp> <temp_diff>0.0</temp_diff> <efficiency>55.0</efficiency></Row>
-<Row><timestamp>2025-07-28T01:00</timestamp> <room>Bedroom</room> <avg_power>60.0</avg_power> <outdoor_temp>21.0</outdoor_temp> <temp_diff>0.0</temp_diff> <efficiency>60.0</efficiency></Row>
-<Row><timestamp>2025-07-28T01:00</timestamp> <room>Kitchen</room> <avg_power>60.0</avg_power> <outdoor_temp>21.0</outdoor_temp> <temp_diff>0.0</temp_diff> <efficiency>60.0</efficiency></Row>
-<Row><timestamp>2025-07-28T02:00</timestamp> <room>Living Room</room> <avg_power>63.0</avg_power> <outdoor_temp>20.2</outdoor_temp> <temp_diff>0.8</temp_diff> <efficiency>35.0</efficiency></Row>
-<Row><timestamp>2025-07-28T02:00</timestamp> <room>Bedroom</room> <avg_power>58.0</avg_power> <outdoor_temp>20.2</outdoor_temp> <temp_diff>0.8</temp_diff> <efficiency>32.2222222222</efficiency></Row>
-<Row><timestamp>2025-07-28T02:00</timestamp> <room>Kitchen</room> <avg_power>57.0</avg_power> <outdoor_temp>20.2</outdoor_temp> <temp_diff>0.8</temp_diff> <efficiency>31.6666666667</efficiency></Row>
-<Row><timestamp>2025-07-28T03:00</timestamp> <room>Living Room</room> <avg_power>54.0</avg_power> <outdoor_temp>19.3</outdoor_temp> <temp_diff>1.7</temp_diff> <efficiency>20.0</efficiency></Row>
-<Row><timestamp>2025-07-28T03:00</timestamp> <room>Bedroom</room> <avg_power>54.0</avg_power> <outdoor_temp>19.3</outdoor_temp> <temp_diff>1.7</temp_diff> <efficiency>20.0</efficiency></Row>
-<Row><timestamp>2025-07-28T03:00</timestamp> <room>Kitchen</room> <avg_power>63.0</avg_power> <outdoor_temp>19.3</outdoor_temp> <temp_diff>1.7</temp_diff> <efficiency>23.3333333333</efficiency></Row>
-<Row><timestamp>2025-07-28T04:00</timestamp> <room>Living Room</room> <avg_power>67.0</avg_power> <outdoor_temp>18.6</outdoor_temp> <temp_diff>2.4</temp_diff> <efficiency>19.7058823529</efficiency></Row>
-<Row><timestamp>2025-07-28T04:00</timestamp> <room>Bedroom</room> <avg_power>64.0</avg_power> <outdoor_temp>18.6</outdoor_temp> <temp_diff>2.4</temp_diff> <efficiency>18.8235294118</efficiency></Row>
-<Row><timestamp>2025-07-28T04:00</timestamp> <room>Kitchen</room> <avg_power>68.0</avg_power> <outdoor_temp>18.6</outdoor_temp> <temp_diff>2.4</temp_diff> <efficiency>20.0</efficiency></Row>
-<Row><timestamp>2025-07-28T05:00</timestamp> <room>Living Room</room> <avg_power>72.0</avg_power> <outdoor_temp>18.2</outdoor_temp> <temp_diff>2.8</temp_diff> <efficiency>18.9473684211</efficiency></Row>
-<Row><timestamp>2025-07-28T05:00</timestamp> <room>Bedroom</room> <avg_power>63.0</avg_power> <outdoor_temp>18.2</outdoor_temp> <temp_diff>2.8</temp_diff> <efficiency>16.5789473684</efficiency></Row>
-<Row><timestamp>2025-07-28T05:00</timestamp> <room>Kitchen</room> <avg_power>65.0</avg_power> <outdoor_temp>18.2</outdoor_temp> <temp_diff>2.8</temp_diff> <efficiency>17.1052631579</efficiency></Row>
-<Row><timestamp>2025-07-28T06:00</timestamp> <room>Living Room</room> <avg_power>71.0</avg_power> <outdoor_temp>17.9</outdoor_temp> <temp_diff>3.1</temp_diff> <efficiency>17.3170731707</efficiency></Row>
-<Row><timestamp>2025-07-28T06:00</timestamp> <room>Bedroom</room> <avg_power>65.0</avg_power> <outdoor_temp>17.9</outdoor_temp> <temp_diff>3.1</temp_diff> <efficiency>15.8536585366</efficiency></Row>
-<Row><timestamp>2025-07-28T06:00</timestamp> <room>Kitchen</room> <avg_power>75.0</avg_power> <outdoor_temp>17.9</outdoor_temp> <temp_diff>3.1</temp_diff> <efficiency>18.2926829268</efficiency></Row>
-<Row><timestamp>2025-07-28T07:00</timestamp> <room>Living Room</room> <avg_power>75.0</avg_power> <outdoor_temp>18.0</outdoor_temp> <temp_diff>3.0</temp_diff> <efficiency>18.75</efficiency></Row>
-<Row><timestamp>2025-07-28T07:00</timestamp> <room>Bedroom</room> <avg_power>65.0</avg_power> <outdoor_temp>18.0</outdoor_temp> <temp_diff>3.0</temp_diff> <efficiency>16.25</efficiency></Row>
-<Row><timestamp>2025-07-28T07:00</timestamp> <room>Kitchen</room> <avg_power>77.0</avg_power> <outdoor_temp>18.0</outdoor_temp> <temp_diff>3.0</temp_diff> <efficiency>19.25</efficiency></Row>
-<Row><timestamp>2025-07-28T08:00</timestamp> <room>Living Room</room> <avg_power>60.0</avg_power> <outdoor_temp>19.7</outdoor_temp> <temp_diff>1.3</temp_diff> <efficiency>26.0869565217</efficiency></Row>
-<Row><timestamp>2025-07-28T08:00</timestamp> <room>Bedroom</room> <avg_power>58.0</avg_power> <outdoor_temp>19.7</outdoor_temp> <temp_diff>1.3</temp_diff> <efficiency>25.2173913043</efficiency></Row>
-<Row><timestamp>2025-07-28T08:00</timestamp> <room>Kitchen</room> <avg_power>63.0</avg_power> <outdoor_temp>19.7</outdoor_temp> <temp_diff>1.3</temp_diff> <efficiency>27.3913043478</efficiency></Row>
-<Row><timestamp>2025-07-28T09:00</timestamp> <room>Living Room</room> <avg_power>54.0</avg_power> <outdoor_temp>22.0</outdoor_temp> <temp_diff>1.0</temp_diff> <efficiency>27.0</efficiency></Row>
-<Row><timestamp>2025-07-28T09:00</timestamp> <room>Bedroom</room> <avg_power>59.0</avg_power> <outdoor_temp>22.0</outdoor_temp> <temp_diff>1.0</temp_diff> <efficiency>29.5</efficiency></Row>
-<Row><timestamp>2025-07-28T09:00</timestamp> <room>Kitchen</room> <avg_power>55.0</avg_power> <outdoor_temp>22.0</outdoor_temp> <temp_diff>1.0</temp_diff> <efficiency>27.5</efficiency></Row>
-<Row><timestamp>2025-07-28T10:00</timestamp> <room>Living Room</room> <avg_power>71.0</avg_power> <outdoor_temp>24.5</outdoor_temp> <temp_diff>3.5</temp_diff> <efficiency>15.7777777778</efficiency></Row>
-<Row><timestamp>2025-07-28T10:00</timestamp> <room>Bedroom</room> <avg_power>72.0</avg_power> <outdoor_temp>24.5</outdoor_temp> <temp_diff>3.5</temp_diff> <efficiency>16.0</efficiency></Row>
-<Row><timestamp>2025-07-28T10:00</timestamp> <room>Kitchen</room> <avg_power>70.0</avg_power> <outdoor_temp>24.5</outdoor_temp> <temp_diff>3.5</temp_diff> <efficiency>15.5555555556</efficiency></Row>
-<Row><timestamp>2025-07-28T11:00</timestamp> <room>Living Room</room> <avg_power>91.0</avg_power> <outdoor_temp>27.1</outdoor_temp> <temp_diff>6.1</temp_diff> <efficiency>12.8169014085</efficiency></Row>
-<Row><timestamp>2025-07-28T11:00</timestamp> <room>Bedroom</room> <avg_power>82.0</avg_power> <outdoor_temp>27.1</outdoor_temp> <temp_diff>6.1</temp_diff> <efficiency>11.5492957746</efficiency></Row>
-<Row><timestamp>2025-07-28T11:00</timestamp> <room>Kitchen</room> <avg_power>84.0</avg_power> <outdoor_temp>27.1</outdoor_temp> <temp_diff>6.1</temp_diff> <efficiency>11.8309859155</efficiency></Row>
-<Row><timestamp>2025-07-28T12:00</timestamp> <room>Living Room</room> <avg_power>104.0</avg_power> <outdoor_temp>29.4</outdoor_temp> <temp_diff>8.4</temp_diff> <efficiency>11.0638297872</efficiency></Row>
-<Row><timestamp>2025-07-28T12:00</timestamp> <room>Bedroom</room> <avg_power>99.0</avg_power> <outdoor_temp>29.4</outdoor_temp> <temp_diff>8.4</temp_diff> <efficiency>10.5319148936</efficiency></Row>
-<Row><timestamp>2025-07-28T12:00</timestamp> <room>Kitchen</room> <avg_power>109.0</avg_power> <outdoor_temp>29.4</outdoor_temp> <temp_diff>8.4</temp_diff> <efficiency>11.5957446809</efficiency></Row>
-<Row><timestamp>2025-07-28T13:00</timestamp> <room>Living Room</room> <avg_power>117.0</avg_power> <outdoor_temp>31.2</outdoor_temp> <temp_diff>10.2</temp_diff> <efficiency>10.4464285714</efficiency></Row>
-<Row><timestamp>2025-07-28T13:00</timestamp> <room>Bedroom</room> <avg_power>107.0</avg_power> <outdoor_temp>31.2</outdoor_temp> <temp_diff>10.2</temp_diff> <efficiency>9.5535714286</efficiency></Row>
-<Row><timestamp>2025-07-28T13:00</timestamp> <room>Kitchen</room> <avg_power>125.0</avg_power> <outdoor_temp>31.2</outdoor_temp> <temp_diff>10.2</temp_diff> <efficiency>11.1607142857</efficiency></Row>
-<Row><timestamp>2025-07-28T14:00</timestamp> <room>Living Room</room> <avg_power>126.0</avg_power> <outdoor_temp>32.2</outdoor_temp> <temp_diff>11.2</temp_diff> <efficiency>10.3278688525</efficiency></Row>
-<Row><timestamp>2025-07-28T14:00</timestamp> <room>Bedroom</room> <avg_power>116.0</avg_power> <outdoor_temp>32.2</outdoor_temp> <temp_diff>11.2</temp_diff> <efficiency>9.5081967213</efficiency></Row>
-<Row><timestamp>2025-07-28T14:00</timestamp> <room>Kitchen</room> <avg_power>130.0</avg_power> <outdoor_temp>32.2</outdoor_temp> <temp_diff>11.2</temp_diff> <efficiency>10.6557377049</efficiency></Row>
-<Row><timestamp>2025-07-28T15:00</timestamp> <room>Living Room</room> <avg_power>131.0</avg_power> <outdoor_temp>33.1</outdoor_temp> <temp_diff>12.1</temp_diff> <efficiency>10.0</efficiency></Row>
-<Row><timestamp>2025-07-28T15:00</timestamp> <room>Bedroom</room> <avg_power>125.0</avg_power> <outdoor_temp>33.1</outdoor_temp> <temp_diff>12.1</temp_diff> <efficiency>9.5419847328</efficiency></Row>
-<Row><timestamp>2025-07-28T15:00</timestamp> <room>Kitchen</room> <avg_power>143.0</avg_power> <outdoor_temp>33.1</outdoor_temp> <temp_diff>12.1</temp_diff> <efficiency>10.9160305344</efficiency></Row>
-<Row><timestamp>2025-07-28T16:00</timestamp> <room>Living Room</room> <avg_power>129.0</avg_power> <outdoor_temp>33.6</outdoor_temp> <temp_diff>12.6</temp_diff> <efficiency>9.4852941176</efficiency></Row>
-<Row><timestamp>2025-07-28T16:00</timestamp> <room>Bedroom</room> <avg_power>128.0</avg_power> <outdoor_temp>33.6</outdoor_temp> <temp_diff>12.6</temp_diff> <efficiency>9.4117647059</efficiency></Row>
-<Row><timestamp>2025-07-28T16:00</timestamp> <room>Kitchen</room> <avg_power>152.0</avg_power> <outdoor_temp>33.6</outdoor_temp> <temp_diff>12.6</temp_diff> <efficiency>11.1764705882</efficiency></Row>
-<Row><timestamp>2025-07-28T17:00</timestamp> <room>Living Room</room> <avg_power>138.0</avg_power> <outdoor_temp>33.7</outdoor_temp> <temp_diff>12.7</temp_diff> <efficiency>10.0729927007</efficiency></Row>
-<Row><timestamp>2025-07-28T17:00</timestamp> <room>Bedroom</room> <avg_power>127.0</avg_power> <outdoor_temp>33.7</outdoor_temp> <temp_diff>12.7</temp_diff> <efficiency>9.2700729927</efficiency></Row>
-<Row><timestamp>2025-07-28T17:00</timestamp> <room>Kitchen</room> <avg_power>155.0</avg_power> <outdoor_temp>33.7</outdoor_temp> <temp_diff>12.7</temp_diff> <efficiency>11.3138686131</efficiency></Row>
-<Row><timestamp>2025-07-28T18:00</timestamp> <room>Living Room</room> <avg_power>142.0</avg_power> <outdoor_temp>33.2</outdoor_temp> <temp_diff>12.2</temp_diff> <efficiency>10.7575757576</efficiency></Row>
-<Row><timestamp>2025-07-28T18:00</timestamp> <room>Bedroom</room> <avg_power>130.0</avg_power> <outdoor_temp>33.2</outdoor_temp> <temp_diff>12.2</temp_diff> <efficiency>9.8484848485</efficiency></Row>
-<Row><timestamp>2025-07-28T18:00</timestamp> <room>Kitchen</room> <avg_power>154.0</avg_power> <outdoor_temp>33.2</outdoor_temp> <temp_diff>12.2</temp_diff> <efficiency>11.6666666667</efficiency></Row>
-<Row><timestamp>2025-07-28T19:00</timestamp> <room>Living Room</room> <avg_power>131.0</avg_power> <outdoor_temp>31.8</outdoor_temp> <temp_diff>10.8</temp_diff> <efficiency>11.1016949153</efficiency></Row>
-<Row><timestamp>2025-07-28T19:00</timestamp> <room>Bedroom</room> <avg_power>116.0</avg_power> <outdoor_temp>31.8</outdoor_temp> <temp_diff>10.8</temp_diff> <efficiency>9.8305084746</efficiency></Row>
-<Row><timestamp>2025-07-28T19:00</timestamp> <room>Kitchen</room> <avg_power>145.0</avg_power> <outdoor_temp>31.8</outdoor_temp> <temp_diff>10.8</temp_diff> <efficiency>12.2881355932</efficiency></Row>
-<Row><timestamp>2025-07-28T20:00</timestamp> <room>Living Room</room> <avg_power>123.0</avg_power> <outdoor_temp>30.2</outdoor_temp> <temp_diff>9.2</temp_diff> <efficiency>12.0588235294</efficiency></Row>
-<Row><timestamp>2025-07-28T20:00</timestamp> <room>Bedroom</room> <avg_power>113.0</avg_power> <outdoor_temp>30.2</outdoor_temp> <temp_diff>9.2</temp_diff> <efficiency>11.0784313725</efficiency></Row>
-<Row><timestamp>2025-07-28T20:00</timestamp> <room>Kitchen</room> <avg_power>137.0</avg_power> <outdoor_temp>30.2</outdoor_temp> <temp_diff>9.2</temp_diff> <efficiency>13.431372549</efficiency></Row>
-<Row><timestamp>2025-07-28T21:00</timestamp> <room>Living Room</room> <avg_power>112.0</avg_power> <outdoor_temp>28.3</outdoor_temp> <temp_diff>7.3</temp_diff> <efficiency>13.4939759036</efficiency></Row>
-<Row><timestamp>2025-07-28T21:00</timestamp> <room>Bedroom</room> <avg_power>96.0</avg_power> <outdoor_temp>28.3</outdoor_temp> <temp_diff>7.3</temp_diff> <efficiency>11.5662650602</efficiency></Row>
-<Row><timestamp>2025-07-28T21:00</timestamp> <room>Kitchen</room> <avg_power>113.0</avg_power> <outdoor_temp>28.3</outdoor_temp> <temp_diff>7.3</temp_diff> <efficiency>13.6144578313</efficiency></Row>
-<Row><timestamp>2025-07-28T22:00</timestamp> <room>Living Room</room> <avg_power>90.0</avg_power> <outdoor_temp>26.7</outdoor_temp> <temp_diff>5.7</temp_diff> <efficiency>13.4328358209</efficiency></Row>
-<Row><timestamp>2025-07-28T22:00</timestamp> <room>Bedroom</room> <avg_power>86.0</avg_power> <outdoor_temp>26.7</outdoor_temp> <temp_diff>5.7</temp_diff> <efficiency>12.8358208955</efficiency></Row>
-<Row><timestamp>2025-07-28T22:00</timestamp> <room>Kitchen</room> <avg_power>103.0</avg_power> <outdoor_temp>26.7</outdoor_temp> <temp_diff>5.7</temp_diff> <efficiency>15.3731343284</efficiency></Row>
-<Row><timestamp>2025-07-28T23:00</timestamp> <room>Living Room</room> <avg_power>82.0</avg_power> <outdoor_temp>25.4</outdoor_temp> <temp_diff>4.4</temp_diff> <efficiency>15.1851851852</efficiency></Row>
-<Row><timestamp>2025-07-28T23:00</timestamp> <room>Bedroom</room> <avg_power>84.0</avg_power> <outdoor_temp>25.4</outdoor_temp> <temp_diff>4.4</temp_diff> <efficiency>15.5555555556</efficiency></Row>
-<Row><timestamp>2025-07-28T23:00</timestamp> <room>Kitchen</room> <avg_power>92.0</avg_power> <outdoor_temp>25.4</outdoor_temp> <temp_diff>4.4</temp_diff> <efficiency>17.037037037</efficiency></Row>
+<Row><timestamp>2025-07-28T21:00</timestamp> <room>Bedroom</room> <avg_power>97.0</avg_power> <outdoor_temp>28.3</outdoor_temp> <temp_diff>7.3</temp_diff> <efficiency>11.686746988</efficiency></Row>
+<Row><timestamp>2025-07-28T21:00</timestamp> <room>Kitchen</room> <avg_power>116.0</avg_power> <outdoor_temp>28.3</outdoor_temp> <temp_diff>7.3</temp_diff> <efficiency>13.9759036145</efficiency></Row>
+<Row><timestamp>2025-07-28T22:00</timestamp> <room>Living Room</room> <avg_power>93.0</avg_power> <outdoor_temp>26.7</outdoor_temp> <temp_diff>5.7</temp_diff> <efficiency>13.8805970149</efficiency></Row>
+<Row><timestamp>2025-07-28T22:00</timestamp> <room>Bedroom</room> <avg_power>88.0</avg_power> <outdoor_temp>26.7</outdoor_temp> <temp_diff>5.7</temp_diff> <efficiency>13.1343283582</efficiency></Row>
+<Row><timestamp>2025-07-28T22:00</timestamp> <room>Kitchen</room> <avg_power>112.0</avg_power> <outdoor_temp>26.7</outdoor_temp> <temp_diff>5.7</temp_diff> <efficiency>16.7164179104</efficiency></Row>
+<Row><timestamp>2025-07-28T23:00</timestamp> <room>Living Room</room> <avg_power>88.0</avg_power> <outdoor_temp>25.4</outdoor_temp> <temp_diff>4.4</temp_diff> <efficiency>16.2962962963</efficiency></Row>
+<Row><timestamp>2025-07-28T23:00</timestamp> <room>Bedroom</room> <avg_power>81.0</avg_power> <outdoor_temp>25.4</outdoor_temp> <temp_diff>4.4</temp_diff> <efficiency>15.0</efficiency></Row>
+<Row><timestamp>2025-07-28T23:00</timestamp> <room>Kitchen</room> <avg_power>97.0</avg_power> <outdoor_temp>25.4</outdoor_temp> <temp_diff>4.4</temp_diff> <efficiency>17.962962963</efficiency></Row>
 </Rows>

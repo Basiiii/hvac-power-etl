@@ -442,7 +442,7 @@
     <type>SQLITE</type>
     <access>Native</access>
     <database>C:\Users\Basi\Documents\Github\hvac-power-etl\data\output\hvac_data.db</database>
-    <port/>
+    <port>-1</port>
     <username/>
     <password>Encrypted </password>
     <servername/>
@@ -459,6 +459,10 @@
       </attribute>
       <attribute>
         <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
         <attribute>N</attribute>
       </attribute>
       <attribute>
@@ -485,18 +489,18 @@
   </connection>
   <order>
     <hop>
-      <from>Filter rows</from>
-      <to>Group by</to>
+      <from>Filter Power Usage</from>
+      <to>Aggregate Rooms</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Group by</from>
+      <from>Aggregate Rooms</from>
       <to>Formula</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Formula</from>
-      <to>Text file output</to>
+      <to>CSV Output</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -506,22 +510,22 @@
     </hop>
     <hop>
       <from>Validate Timestamp</from>
-      <to>Filter rows</to>
+      <to>Filter Power Usage</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Formula</from>
-      <to>XML output</to>
+      <to>XML Output</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Group by</from>
+      <from>Aggregate Rooms</from>
       <to>Status Variable</to>
       <enabled>N</enabled>
     </hop>
     <hop>
       <from>Formula</from>
-      <to>Table output</to>
+      <to>DB Output</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -627,13 +631,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>96</xloc>
+      <xloc>48</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Filter rows</name>
+    <name>Filter Power Usage</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -671,7 +675,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>320</xloc>
+      <xloc>336</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -712,13 +716,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
+      <xloc>624</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Group by</name>
+    <name>Aggregate Rooms</name>
     <type>GroupBy</type>
     <description/>
     <distribute>N</distribute>
@@ -773,7 +777,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>416</xloc>
+      <xloc>480</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -806,13 +810,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>544</xloc>
-      <yloc>288</yloc>
+      <xloc>624</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Table output</name>
+    <name>DB Output</name>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -886,13 +890,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
+      <xloc>784</xloc>
       <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>Text file output</name>
+    <name>CSV Output</name>
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1015,7 +1019,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
+      <xloc>784</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
@@ -1059,13 +1063,13 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>208</xloc>
+      <xloc>192</xloc>
       <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
   <step>
-    <name>XML output</name>
+    <name>XML Output</name>
     <type>XMLOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1183,7 +1187,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
+      <xloc>784</xloc>
       <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>

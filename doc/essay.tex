@@ -90,13 +90,14 @@
 \newpage
 \section{Enquadramento}
 
-O presente trabalho descreve o desenvolvimento de um pipeline de dados completo para recolha, transformação e análise de variáveis ambientais, nomeadamente:
+O presente trabalho descreve o desenvolvimento de um pipeline de dados completo para recolha, transformação, armazenamento e análise de variáveis ambientais, nomeadamente:
 temperatura exterior, temperatura interior simulada e consumo energético de um sistema HVAC.
 
-O sistema é composto por três módulos principais:
+O sistema é composto por quatro módulos principais:
 \begin{itemize}
 	\item \textbf{Node-RED:} aquisição de dados e simulação das variáveis ambientais;
 	\item \textbf{Pentaho Data Integration (Kettle):} transformação, limpeza, enriquecimento e exportação dos dados;
+	\item \textbf{Base de Dados SQLite:} armazenamento estruturado e persistente dos resultados processados;
 	\item \textbf{Python (pandas, matplotlib, seaborn):} análise estatística e visualização gráfica dos resultados.
 \end{itemize}
 
@@ -104,20 +105,19 @@ O sistema é composto por três módulos principais:
 
 \newpage
 \section{Problema}
-
-A gestão eficiente da climatização em edifícios residenciais e comerciais é um desafio crescente, dada a variabilidade das condições exteriores e o impacto direto no consumo energético.  
-O controlo manual do HVAC ou a falta de monitorização contínua leva a desperdício de energia e a condições de conforto inconsistentes.\\
+A gestão eficiente da climatização em edifícios residenciais e comerciais é um desafio crescente, dada a variabilidade das condições exteriores e o impacto direto no consumo energético.
+O controlo manual do HVAC ou a falta de monitorização contínua leva a desperdício de energia e a condições de conforto inconsistentes.\
 
 O objetivo deste trabalho é demonstrar um pipeline de dados capaz de:
 \begin{itemize}
-	\item Recolher temperaturas exteriores via API pública, permitindo monitorização;
+	\item Recolher temperaturas exteriores via API pública, permitindo monitorização contínua;
 	\item Simular a evolução da temperatura interior e o consumo do HVAC, com base em modelos térmicos iterativos;
-	\item Processar e enriquecer os dados no Pentaho;
-	\item Exportar resultados em CSV e XML para análise posterior;
-	\item Gerar gráficos em Python que permitam avaliar padrões de consumo e identificar oportunidades de otimização energética.
+	\item Processar, validar e enriquecer os dados no Pentaho, incluindo cálculos de eficiência e diferença térmica;
+	\item Exportar os resultados para vários formatos — \textbf{CSV, XML e Base de Dados SQLite} — de modo a permitir integração e análise em diferentes plataformas;
+	\item Gerar gráficos e análises estatísticas em Python que permitam avaliar padrões de consumo e identificar oportunidades de otimização energética.
 \end{itemize}
 
-Desta forma, o pipeline não só replica o comportamento térmico de um edifício como também fornece dados estruturados que permitem tomar decisões informadas sobre a eficiência do sistema HVAC.
+Desta forma, o pipeline não só replica o comportamento térmico de um edifício como também fornece dados estruturados, persistentes e prontos para análise, permitindo uma avaliação clara da eficiência do sistema HVAC e do impacto das condições ambientais.
 
 %------------------------------------------------------------------------------------
 
@@ -155,8 +155,11 @@ T_{\text{interior}}(t) = T_{\text{anterior}} + \alpha \cdot (T_{\text{exterior}}
 	\item $\epsilon$: ruído aleatório que introduz variação realista.\\
 \end{itemize}
 
-Este modelo é iterativo, a cada ciclo de simulação, a temperatura interior é atualizada em função dos valores anteriores.  
+Este modelo é iterativo - a cada ciclo de simulação, a temperatura interior é atualizada em função dos valores anteriores.  
 A componente $\alpha$ controla a velocidade de dissipação térmica (edifícios mais isolados têm $\alpha$ menor), enquanto $\beta$ representa a eficiência de regulação térmica do HVAC.
+
+
+%------------------------------------------------------------------------------------
 
 \subsubsection*{Consumo Energético do HVAC}
 
@@ -206,61 +209,151 @@ O resultado é um conjunto de ficheiros estruturados prontos para análise estat
 \section{Transformações e Jobs (Pentaho)}
 
 \subsection{Transformações}
-%\begin{center}
-%	\includegraphics[width=0.8\textwidth]{transformacao_pentaho.png}
-%\end{center}
-A transformação inclui leitura, limpeza e criação de novas colunas.  
-Os campos são normalizados e exportados em dois formatos.
+
+A transformação principal, designada \textbf{``etl\_climate\_analysis''}, foi desenvolvida no Pentaho Data Integration (Kettle) e tem como objetivo processar os ficheiros CSV gerados pelo Node-RED, realizar operações de limpeza e enriquecimento, e exportar os resultados para múltiplos destinos.\\
+
+A transformação é composta pelas seguintes etapas principais:
+
+\begin{itemize}
+	\item \textbf{CSV File Input:}  
+	Lê os dados provenientes do Node-RED. Cada linha contém o timestamp, o identificador do dispositivo, o nome da divisão, o tipo de sensor, o valor medido e a temperatura exterior correspondente.  
+	Os campos são importados com os respetivos tipos (string, number, date).
+	
+	\item \textbf{Validate Timestamp (Regex):}  
+	Validação da coluna de data/hora através de uma expressão regular, garantindo o formato correto antes do processamento. Linhas com timestamps inválidos são rejeitadas.
+	
+	\item \textbf{Filter Rows (Sensor Type = Power):}  
+	Filtra apenas os registos relativos ao consumo energético (\texttt{sensor\_type = "power"}), eliminando medições de temperatura interna.  
+	Este passo reduz o volume de dados e foca a análise no comportamento energético do sistema HVAC.
+	
+	\item \textbf{Group By (Aggregate Power):}  
+	Os dados são agregados por \textbf{timestamp} e \textbf{divisão}, calculando:
+	\begin{itemize}
+		\item \texttt{avg\_power} — consumo médio de energia;
+		\item \texttt{outdoor\_temp} — média da temperatura exterior;
+	\end{itemize}
+	
+	\item \textbf{Formula Step (Calculated Fields):}  
+	Através da etapa \textit{Formula}, são geradas novas colunas derivadas:
+	\begin{itemize}
+		\item \texttt{efficiency} — eficiência térmica estimada com base no rácio entre potência média e diferença térmica;
+		\item \texttt{temp\_diff} — diferença absoluta entre temperatura interior simulada e exterior.
+	\end{itemize}
+	Estes cálculos complementam a análise energética do sistema HVAC.
+	
+	\item \textbf{Table Output (SQLite):}  
+	Os dados enriquecidos são inseridos numa base de dados SQLite local (\texttt{hvac\_data.db}).
+	
+	\item \textbf{Text File Output (CSV Export):}  
+	Exporta o dataset final para formato CSV, permitindo integração com outras ferramentas analíticas.
+	
+	\item \textbf{XML Output:}  
+	Gera um ficheiro XML com a mesma informação, facilitando a interoperabilidade e validação estrutural dos dados.
+\end{itemize}
+
+O fluxo completo garante a consistência entre diferentes formatos de exportação e cria um dataset limpo e consolidado para análise posterior.
 
 \subsection{Jobs}
-%\begin{center}
-%	\includegraphics[width=0.8\textwidth]{job_pentaho.png}
-%\end{center}
-O job executa automaticamente as transformações, verifica a existência dos ficheiros de entrada e gera logs de execução.
+
+O job, denominado \textbf{``etl\_hvac\_power''}, orquestra a execução das transformações e gere o fluxo global de execução.
+
+As etapas principais são:
+
+\begin{itemize}
+	\item \textbf{Log Start:}  
+	Gera uma entrada de log com a data/hora de início, permitindo o acompanhamento das execuções no histórico de logs.
+	
+	\item \textbf{Run Transformation (climate\_transform):}  
+	Chama a transformação principal, realizando todo o processo de ETL descrito anteriormente.  
+	Caso ocorram erros, o job é interrompido e o resultado é registado como falha.
+	
+	\item \textbf{Log End:}  
+	Regista a conclusão da execução e o estado final (sucesso ou erro), encerrando o processo de forma controlada.
+\end{itemize}
+
+Este job garante a execução automatizada e sequencial das tarefas.
 
 %------------------------------------------------------------------------------------
 
 \newpage
 \section{Análise e Visualização (Python)}
 
-Os ficheiros finais são processados em Python usando:
+Após a execução do pipeline ETL, os ficheiros finais são processados em Python para análise estatística e visualização gráfica dos dados.  
+As bibliotecas utilizadas incluem:
+
 \begin{itemize}
-	\item \texttt{pandas} (v$\geq$2.0) para manipulação e agregação de dados;
-	\item \texttt{matplotlib} (v$\geq$3.7) para gráficos base;
-	\item \texttt{seaborn} (v$\geq$0.13) para visualizações estatísticas.
+	\item \texttt{pandas} (v$\geq$2.0) para manipulação, limpeza, agregação e fusão de datasets;
+	\item \texttt{matplotlib} (v$\geq$3.7) para a criação de gráficos básicos de linhas, barras e dispersão;
+	\item \texttt{seaborn} (v$\geq$0.13) para visualizações estatísticas avançadas, incluindo boxplots e regressões lineares.
 \end{itemize}
 
-Foram produzidos gráficos de temperatura exterior/interior e consumo energético médio por sala e por dia.
+Foram produzidos os seguintes gráficos a partir do dataset processado:
+
+\begin{itemize}
+	\item \textbf{Scatter Plot — Power vs Outdoor Temperature:} visualiza a relação entre a temperatura exterior e o consumo médio de energia (\texttt{avg\_power}). (Figura: \texttt{power\_vs\_outdoor\_temp.png})
+	\item \textbf{Scatter Plot — Power vs Temperature Difference:} mostra a relação entre a diferença de temperatura (\texttt{temp\_diff}) e o consumo médio de energia. (Figura: \texttt{power\_vs\_temp\_diff.png})
+	\item \textbf{3D Scatter Plot — Outdoor Temp vs Temp Diff vs Avg Power:} fornece uma visão tridimensional do consumo energético em função da temperatura exterior e da diferença de temperatura, codificando a eficiência pelo esquema de cores. (Figura: \texttt{3d\_power\_temp.png})
+	\item \textbf{Histogram of Efficiency:} distribuição da eficiência do HVAC ao longo de todos os registos, permitindo identificar padrões e outliers. (Figura: \texttt{efficiency\_hist.png})
+	\item \textbf{Boxplot of Avg Power per Room:} análise comparativa do consumo médio de energia por sala, destacando variações entre divisões. (Figura: \texttt{avg\_power\_boxplot.png})
+\end{itemize}
+
+Estas visualizações permitem identificar padrões de consumo, períodos de maior esforço do HVAC, diferenças entre salas e a relação entre condições exteriores e desempenho energético.  
+A utilização conjunta de scatter plots, 3D plots, histogramas e boxplots fornece uma análise completa e facilmente interpretável do comportamento do sistema HVAC, complementando os cálculos realizados no Pentaho.
 
 %------------------------------------------------------------------------------------
 
 \newpage
-\section{Vídeo com Demonstração}
-%\begin{center}
-%	\qrcode{https://linkparaoseuvideo.com}
-%\end{center}
+\section{Vídeo de Demonstração}
+
+Para complementar o relatório, foi produzido um vídeo demonstrativo do pipeline completo, incluindo:
+
+\begin{itemize}
+	\item Simulação de dados com Node-RED;
+	\item Processamento e transformação no Pentaho (Kettle);
+	\item Exportação de dados para CSV, XML e SQLite;
+	\item Visualização e análise em Python.
+\end{itemize}
+
+O vídeo pode ser acedido diretamente através do seguinte QR Code:
+
+\begin{center}
+	\includegraphics[width=0.4\textwidth]{qrcode_video.png}
+\end{center}
+
+\noindent \textbf{Link direto:} \url{https://drive.google.com/file/d/1q7uXCaNz5Eu7ypg1x0YI0lOxh1eN9QmP/view}
 
 %------------------------------------------------------------------------------------
 
 \newpage
 \section{Conclusão e Trabalhos Futuros}
 
-O pipeline integra aquisição, simulação, transformação e visualização.  
-A abordagem modular permite fácil expansão e automação.  
+O presente trabalho permitiu desenvolver e implementar um pipeline completo de ETL para monitorização e análise de sistemas HVAC, desde a recolha de dados até à visualização de resultados.  
+Foram alcançados os seguintes objetivos:
 
-\textbf{Trabalhos futuros:}
 \begin{itemize}
-	\item Integração direta Node-RED \(\rightarrow\) Pentaho via API;
-	\item Dashboards interativos (Grafana, Power BI);
-	\item Modelos preditivos de consumo energético.
+	\item Integração de dados simulados e reais via Node-RED, combinando informação de sensores internos e dados meteorológicos externos;
+	\item Processamento e limpeza de dados no Pentaho, incluindo validação de timestamps, filtragem, agregações e cálculo de métricas derivadas (\texttt{efficiency} e \texttt{temp\_diff});
+	\item Exportação de dados para vários formatos (CSV, XML e SQLite) garantindo persistência e facilidade de análise;
+	\item Visualização e análise estatística em Python, permitindo identificar padrões de consumo energético, comportamento térmico das divisões e eficiência do sistema HVAC.
 \end{itemize}
+
+O pipeline demonstrou ser reprodutível, modular e escalável, fornecendo \textit{insights} relevantes para monitorização e otimização energética de edifícios.
+
+\textbf{Trabalhos Futuros:}
+
+\begin{itemize}
+	\item Implementação de logging mais detalhado e métricas de desempenho do ETL, permitindo monitorização contínua do pipeline;
+	\item Expansão da simulação para incluir outros parâmetros ambientais, como humidade, ocupação e consumo real de energia;
+\end{itemize}
+
+Estas melhorias permitiriam transformar o pipeline atual num sistema inteligente de monitorização e otimização de climatização, apto a utilização em contextos reais de edifícios residenciais ou comerciais.
 
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 \nocite{*}
-
-% \printbibliography
+\newpage
+\printbibliography
 %----------------------------------------------------------------------------------------
 
 \end{document}

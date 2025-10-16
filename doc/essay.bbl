@@ -17,118 +17,68 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global/global}
-  \entry{IEEEexample:BSTcontrol}{misc}{}{}
-  \endentry
-
-  \entry{espinoza2012optimization}{inproceedings}{}{}
-    \name{author}{3}{}{%
-      {{hash=EMS}{%
-         family={Espinoza},
-         familyi={E\bibinitperiod},
-         given={Mario\bibnamedelima S{\'a}enz},
-         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=PAI}{%
-         family={Pereira},
-         familyi={P\bibinitperiod},
-         given={Ana\bibnamedelima I},
-         giveni={A\bibinitperiod\bibinitdelim I\bibinitperiod},
-      }}%
-      {{hash=GJ}{%
-         family={Gon{\c{c}}alves},
-         familyi={G\bibinitperiod},
-         given={Jos{\'e}},
-         giveni={J\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{EMSPAIGJ1}
-    \strng{fullhash}{EMSPAIGJ1}
-    \field{labelnamesource}{author}
+  \entry{matplotlib}{misc}{}{}
     \field{labeltitlesource}{title}
-    \field{sortinit}{E}
-    \field{sortinithash}{E}
-    \field{booktitle}{AIP Conference Proceedings}
-    \field{pages}{818}
-    \field{title}{Optimization methods for hyper-redundant robots' inverse
-  kinematics in biomedical applications}
-    \field{volume}{1479}
-    \field{year}{2012}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{howpublished}{\url{https://matplotlib.org/stable/contents.html}}
+    \field{note}{Accessed: 2025-10-16}
+    \field{title}{Matplotlib Documentation}
   \endentry
 
-  \entry{espinoza2012inverse}{inproceedings}{}{}
-    \name{author}{5}{}{%
-      {{hash=EMS}{%
-         family={Espinoza},
-         familyi={E\bibinitperiod},
-         given={Mario\bibnamedelima S{\'a}enz},
-         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=GJ}{%
-         family={Goncalves},
-         familyi={G\bibinitperiod},
-         given={Jose},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=LP}{%
-         family={Leitao},
-         familyi={L\bibinitperiod},
-         given={Paulo},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=SJLG}{%
-         family={Sanchez},
-         familyi={S\bibinitperiod},
-         given={Jose Luis\bibnamedelima Gonzalez},
-         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim
-  G\bibinitperiod},
-      }}%
-      {{hash=HA}{%
-         family={Herreros},
-         familyi={H\bibinitperiod},
-         given={Alberto},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{organization}{1}{%
-      {IEEE}%
-    }
-    \strng{namehash}{EMS+1}
-    \strng{fullhash}{EMSGJLPSJLGHA1}
-    \field{labelnamesource}{author}
+  \entry{nodered}{misc}{}{}
     \field{labeltitlesource}{title}
-    \field{sortinit}{E}
-    \field{sortinithash}{E}
-    \field{booktitle}{Robotics Symposium and Latin American Robotics Symposium
-  (SBR-LARS), 2012 Brazilian}
-    \field{pages}{125\bibrangedash 130}
-    \field{title}{Inverse Kinematics of a 10 DOF modular hyper-redundant robot
-  resorting to exhaustive and error-optimization methods: A comparative study}
-    \field{year}{2012}
+    \field{sortinit}{N}
+    \field{sortinithash}{N}
+    \field{howpublished}{\url{https://nodered.org/docs/}}
+    \field{note}{Accessed: 2025-10-16}
+    \field{title}{Node-RED Documentation}
   \endentry
 
-  \entry{kn:Tha01}{misc}{}{}
+  \entry{openmeteo}{misc}{}{}
     \name{author}{1}{}{%
-      {{hash=TM}{%
-         family={Tham},
-         familyi={T\bibinitperiod},
-         given={Ming},
-         giveni={M\bibinitperiod},
+      {{hash=O}{%
+         family={{Open-Meteo}},
+         familyi={O\bibinitperiod},
       }}%
     }
-    \strng{namehash}{TM1}
-    \strng{fullhash}{TM1}
+    \strng{namehash}{O1}
+    \strng{fullhash}{O1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{T}
-    \field{sortinithash}{T}
-    \field{note}{University of Newcastle Upon Tyne}
-    \field{title}{Writing Research Theses or Dissertations}
-    \verb{url}
-    \verb http://lorien.ncl.ac.uk/ming/dept/Tips/writing/thesis/thesis-intro.ht
-    \verb m
-    \endverb
-    \field{year}{2001}
-    \warn{\item Invalid format of field 'month'}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+  \field{howpublished}{\url{https://open-meteo.com/en/docs/historical-weather-api}}
+    \field{note}{Accessed: 2025-10-16}
+    \field{title}{Open-Meteo Historical Weather API}
+    \field{year}{2025}
+  \endentry
+
+  \entry{pandas}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{P}
+    \field{sortinithash}{P}
+    \field{howpublished}{\url{https://pandas.pydata.org/docs/}}
+    \field{note}{Accessed: 2025-10-16}
+    \field{title}{Python pandas Documentation}
+  \endentry
+
+  \entry{seaborn}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{howpublished}{\url{https://seaborn.pydata.org/}}
+    \field{note}{Accessed: 2025-10-16}
+    \field{title}{Seaborn Documentation}
+  \endentry
+
+  \entry{sqlite}{misc}{}{}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{howpublished}{\url{https://www.sqlite.org/docs.html}}
+    \field{note}{Accessed: 2025-10-16}
+    \field{title}{SQLite Documentation}
   \endentry
 \enddatalist
 \endinput
