@@ -91,3 +91,10 @@ O projeto consiste na construção de um pipeline completo de ETL e análise de 
 
 4. **Ver Relatório**
    - Relatório final: `doc/28602_doc.pdf`.
+
+---
+
+## Repositório Online
+
+O repositório completo do projeto pode ser consultado online em:  
+[https://github.com/Basiiii/hvac-power-etl](https://github.com/Basiiii/hvac-power-etl)
